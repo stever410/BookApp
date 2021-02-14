@@ -10,9 +10,9 @@ const SearchInput = () => {
     <>
       <SearchBar
         containerStyle={styles.container}
-        lightTheme={true}
-        platform="android"
-        searchIcon={<Icon name="search" size={28} style={{marginLeft: 6}} />}
+        inputStyle={styles.input}
+        inputContainerStyle={styles.inputContainer}
+        searchIcon={<Icon name="search" size={20} style={styles.searchIcon} />}
         placeholder="Try books or writers..."
         onChangeText={updateSearch}
         value={search}

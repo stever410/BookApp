@@ -1,13 +1,10 @@
 import React, {useRef, useState, useEffect} from 'react';
-import Carousel, {ParallaxImage} from 'react-native-snap-carousel';
-import {
-  View,
-  Text,
-  Dimensions,
-  StyleSheet,
-  Platform,
-  Image,
-} from 'react-native';
+import Carousel from 'react-native-snap-carousel';
+import {View, Dimensions} from 'react-native';
+import SliderEntry from '../SliderEntry';
+import {Text} from 'react-native-elements';
+import styles from './index.styles';
+import {ITEM_HEIGHT, ITEM_WIDTH, SLIDER_WIDTH} from './constants';
 
 const ENTRIES1 = [
   {
@@ -36,9 +33,8 @@ const ENTRIES1 = [
     illustration: 'https://i.imgur.com/2nCt3Sbl.jpg',
   },
 ];
-const {width: screenWidth} = Dimensions.get('window');
 
-const MyCarousel = (props) => {
+const BookCarousel = (props) => {
   const [entries, setEntries] = useState([]);
   const carouselRef = useRef(null);
 
@@ -47,53 +43,27 @@ const MyCarousel = (props) => {
   }, []);
 
   const renderItem = ({item, index}, parallaxProps) => {
-    return (
-      <View style={styles.item}>
-        <ParallaxImage
-          source={{uri: item.illustration}}
-          containerStyle={styles.imageContainer}
-          style={styles.image}
-          parallaxFactor={0.4}
-          {...parallaxProps}
-        />
-        <Text numberOfLines={2}>{item.title}</Text>
-      </View>
-    );
+    return <SliderEntry data={item} parallaxProps={parallaxProps} />;
   };
 
   return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.header}>Recommended</Text>
+      <Text style={styles.subheader}>
+        Books based on your previous interests
+      </Text>
       <Carousel
+        activeSlideAlignment="start"
+        containerCustomStyle={styles.carouselContainer}
         ref={carouselRef}
-        sliderWidth={screenWidth}
-        sliderHeight={screenWidth}
-        itemWidth={screenWidth - 60}
+        sliderWidth={SLIDER_WIDTH}
+        itemWidth={ITEM_WIDTH}
         data={entries}
         renderItem={renderItem}
-        hasParallaxImages={true}
+        hasParallaxImages
       />
     </View>
   );
 };
 
-export default MyCarousel;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  item: {
-    width: screenWidth - 60,
-    height: screenWidth - 60,
-  },
-  imageContainer: {
-    flex: 1,
-    backgroundColor: 'white',
-    borderRadius: 8,
-  },
-  image: {
-    ...StyleSheet.absoluteFillObject,
-    height: 500,
-    resizeMode: 'cover',
-  },
-});
+export default BookCarousel;

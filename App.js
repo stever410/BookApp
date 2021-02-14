@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import {Divider} from 'react-native-elements';
 import Header from './src/containers/Header';
 import Homepage from './src/containers/Homepage';
