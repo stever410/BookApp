@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     marginLeft: 6,
   },
   input: {
-    fontFamily: FONTS.avenirRegular,
+    fontFamily: FONTS.sfText,
     fontSize: 16,
   },
 });

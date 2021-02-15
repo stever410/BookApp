@@ -7,18 +7,27 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginVertical: 5,
   },
+  carouselHeader: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+  },
+  detailButton: {
+    backgroundColor: 'transparent',
+  },
   carouselContainer: {
     marginTop: 10,
   },
   header: {
-    fontFamily: FONTS.avenirBold,
+    fontFamily: FONTS.sfDisplayBold,
     fontSize: 18,
     color: COLORS.darkBlue,
   },
-  subheader: {
-    fontFamily: FONTS.avenirDemi,
+  description: {
+    fontFamily: FONTS.sfDisplayMedium,
     fontSize: 13,
-    color: COLORS.lightGray,
+    color: COLORS.gray,
   },
 });
 

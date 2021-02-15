@@ -1,21 +1,28 @@
 import React from 'react';
-import {StyleSheet, View, Text} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Divider} from 'react-native-elements';
 import Header from './src/containers/Header';
-import Homepage from './src/containers/Homepage';
+import HomeScreen from './src/containers/HomeScreen';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import BottomMenu from './src/components/BottomMenu';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Header />
-      <Divider />
-      <Homepage />
-    </View>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        <Header />
+        <Divider />
+        <HomeScreen />
+        <BottomMenu />
+      </View>
+    </SafeAreaProvider>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    display: 'flex',
+    justifyContent: 'center',
     backgroundColor: '#fff',
     height: '100%',
   },

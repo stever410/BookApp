@@ -1,64 +1,43 @@
 import React, {useRef, useState, useEffect} from 'react';
 import Carousel from 'react-native-snap-carousel';
-import {View, Dimensions} from 'react-native';
-import SliderEntry from '../SliderEntry';
-import {Text} from 'react-native-elements';
+import {View} from 'react-native';
+import {Button, Icon, Text} from 'react-native-elements';
+import SliderEntry from './SliderEntry';
 import styles from './index.styles';
-import {ITEM_HEIGHT, ITEM_WIDTH, SLIDER_WIDTH} from './constants';
-
-const ENTRIES1 = [
-  {
-    title: 'Beautiful and dramatic Antelope Canyon',
-    subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-    illustration: 'https://i.imgur.com/UYiroysl.jpg',
-  },
-  {
-    title: 'Earlier this morning, NYC',
-    subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://i.imgur.com/UPrs1EWl.jpg',
-  },
-  {
-    title: 'White Pocket Sunset',
-    subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-    illustration: 'https://i.imgur.com/MABUbpDl.jpg',
-  },
-  {
-    title: 'Acrocorinth, Greece',
-    subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-    illustration: 'https://i.imgur.com/KZsmUi2l.jpg',
-  },
-  {
-    title: 'The lone tree, majestic landscape of New Zealand',
-    subtitle: 'Lorem ipsum dolor sit amet',
-    illustration: 'https://i.imgur.com/2nCt3Sbl.jpg',
-  },
-];
+import {ITEM_WIDTH, SLIDER_WIDTH} from './constants';
 
 const BookCarousel = (props) => {
-  const [entries, setEntries] = useState([]);
+  const [books, setBooks] = useState([]);
+  const {item} = props;
   const carouselRef = useRef(null);
 
   useEffect(() => {
-    setEntries(ENTRIES1);
-  }, []);
+    setBooks(item.books);
+  }, [item.books]);
 
-  const renderItem = ({item, index}, parallaxProps) => {
+  const renderItem = ({item}, parallaxProps) => {
     return <SliderEntry data={item} parallaxProps={parallaxProps} />;
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Recommended</Text>
-      <Text style={styles.subheader}>
-        Books based on your previous interests
-      </Text>
+      <View style={styles.carouselHeader}>
+        <View>
+          <Text style={styles.header}>{item.title}</Text>
+          <Text style={styles.description}>{item.description}</Text>
+        </View>
+        <Button
+          buttonStyle={styles.detailButton}
+          icon={<Icon type="ionicon" name="arrow-forward-outline" size={20} />}
+        />
+      </View>
       <Carousel
         activeSlideAlignment="start"
         containerCustomStyle={styles.carouselContainer}
         ref={carouselRef}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
-        data={entries}
+        data={books}
         renderItem={renderItem}
         hasParallaxImages
       />
