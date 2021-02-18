@@ -7,9 +7,10 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   title: {
-    fontSize: 12,
+    fontSize: 11,
     fontFamily: FONTS.sfTextSemiBold,
     color: COLORS.purple,
     marginLeft: 6,

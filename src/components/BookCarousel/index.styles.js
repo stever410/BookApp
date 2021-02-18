@@ -5,7 +5,7 @@ import FONTS from '../../configs/fonts';
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 10,
-    marginVertical: 5,
+    marginBottom: 15,
   },
   carouselHeader: {
     display: 'flex',

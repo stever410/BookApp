@@ -1,9 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {ITEM_WIDTH} from '../constants';
 
 const styles = StyleSheet.create({
   item: {
-    width: 100,
-    height: 200,
+    width: ITEM_WIDTH,
+    height: 150,
   },
   imageContainer: {
     flex: 1,

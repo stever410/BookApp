@@ -9,11 +9,17 @@ const useHooks = () => {
 
   useEffect(() => {
     const newButtons = [];
-    BOTTOM_NAVIGATION_BUTTONS.forEach((item) => {
-      newButtons.push({element: () => <NavigationButton {...item} />});
+    BOTTOM_NAVIGATION_BUTTONS.forEach((item, index) => {
+      if (index === selectedIndex) {
+        newButtons.push({element: () => <NavigationButton {...item} />});
+      } else {
+        newButtons.push({
+          element: () => <NavigationButton {...item} isDisabled />,
+        });
+      }
     });
     setButtons([...newButtons]);
-  }, []);
+  }, [selectedIndex]);
 
   const handleButtonPress = (index) => {
     setSelectedIndex(index);
