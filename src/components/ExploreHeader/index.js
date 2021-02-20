@@ -16,7 +16,7 @@ const ExploreHeader = () => {
             name="notifications-outline"
             type="ionicon"
             size={20}
-            color={COLORS.darkBlue}
+            color={COLORS.DARK_BLUE}
           />
         }
       />

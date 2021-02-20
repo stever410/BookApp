@@ -19,12 +19,12 @@ const styles = StyleSheet.create({
   header: {
     fontFamily: FONTS.sfDisplayBold,
     fontSize: 18,
-    color: COLORS.darkBlue,
+    color: COLORS.DARK_BLUE,
   },
   description: {
     fontFamily: FONTS.sfDisplayMedium,
     fontSize: 13,
-    color: COLORS.gray,
+    color: COLORS.GRAY,
   },
 });
 

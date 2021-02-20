@@ -18,7 +18,7 @@ const SearchInput = () => {
             type="ionicon"
             size={20}
             style={styles.searchIcon}
-            color={COLORS.darkBlue}
+            color={COLORS.DARK_BLUE}
           />
         }
         placeholder="Try books or writers..."

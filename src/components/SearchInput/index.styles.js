@@ -5,12 +5,12 @@ import FONTS from '../../configs/fonts';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: 'transparent',
     borderBottomWidth: 0,
     borderTopWidth: 0,
   },
   inputContainer: {
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: 'transparent',
   },
   searchIcon: {
     marginLeft: 6,
