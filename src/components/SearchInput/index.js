@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Icon, SearchBar} from 'react-native-elements';
+import COLORS from '../../configs/colors';
 import styles from './index.styles';
 
 const SearchInput = () => {
@@ -17,6 +18,7 @@ const SearchInput = () => {
             type="ionicon"
             size={20}
             style={styles.searchIcon}
+            color={COLORS.darkBlue}
           />
         }
         placeholder="Try books or writers..."

@@ -8,15 +8,25 @@ import {ITEM_WIDTH, SLIDER_WIDTH} from './constants';
 
 const BookCarousel = (props) => {
   const [books, setBooks] = useState([]);
-  const {item} = props;
+  const {item, navigation} = props;
   const carouselRef = useRef(null);
+
+  const handlePress = () => {
+    navigation.push('Detail');
+  };
 
   useEffect(() => {
     setBooks(item.books);
   }, [item.books]);
 
   const renderItem = ({item}, parallaxProps) => {
-    return <SliderEntry data={item} parallaxProps={parallaxProps} />;
+    return (
+      <SliderEntry
+        data={item}
+        parallaxProps={parallaxProps}
+        handlePress={handlePress}
+      />
+    );
   };
 
   return (
