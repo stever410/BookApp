@@ -13,9 +13,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'baseline',
   },
-  detailButton: {
-    backgroundColor: 'transparent',
-  },
   carouselContainer: {
     marginTop: 10,
   },

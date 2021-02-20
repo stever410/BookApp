@@ -1,9 +1,11 @@
 const COLORS = {
-  darkBlue: '#031240',
-  gray: '#9ea4b5',
-  lightGray: '#D6D7EA',
-  purple: '#505cff',
-  lightBlue: '#E9EAFF',
+  DARK_BLUE: '#031240',
+  GRAY: '#959baf',
+  LIGHT_GRAY: '#D6D7EA',
+  PURPLE: '#505cff',
+  LIGHT_BLUE: '#E9EAFF',
+  WHITE: '#fff',
+  BLACK: '#000',
 };
 
 export default COLORS;

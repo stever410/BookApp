@@ -8,6 +8,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Icon} from 'react-native-elements';
 import {SCREEN_ICONS} from './src/constants';
 import COLORS from './src/configs/colors';
+import FONTS from './src/configs/fonts';
 
 const Tab = createBottomTabNavigator();
 
@@ -34,6 +35,7 @@ const App = () => {
           tabBarOptions={{
             activeTintColor: COLORS.purple,
             inactiveTintColor: COLORS.gray,
+            labelStyle: {fontFamily: FONTS.sfDisplay, marginBottom: 2},
           }}>
           <Tab.Screen name="Explore" component={HomeScreen} />
           <Tab.Screen name="Books" component={BookScreen} />

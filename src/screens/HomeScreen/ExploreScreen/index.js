@@ -3,6 +3,7 @@ import {FlatList, View} from 'react-native';
 import {Divider} from 'react-native-elements';
 import BookCarousel from '../../../components/BookCarousel';
 import ExploreHeader from '../../../components/ExploreHeader';
+import styles from './index.styles';
 const ENTRIES1 = [
   {
     title: 'Beautiful and dramatic Antelope Canyon',
@@ -53,7 +54,7 @@ const DATA = [
 ];
 
 const ExploreScreen = (props) => (
-  <View style={{backgroundColor: '#fff'}}>
+  <View style={styles.container}>
     <ExploreHeader />
     <Divider />
     <FlatList

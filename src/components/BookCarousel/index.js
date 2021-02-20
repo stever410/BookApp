@@ -11,15 +11,15 @@ const BookCarousel = (props) => {
   const {item, navigation} = props;
   const carouselRef = useRef(null);
 
-  const handlePress = () => {
-    navigation.push('Detail');
-  };
-
   useEffect(() => {
     setBooks(item.books);
   }, [item.books]);
 
-  const renderItem = ({item}, parallaxProps) => {
+  const renderItem = (book, parallaxProps) => {
+    const {item} = book;
+    const handlePress = () => {
+      navigation.push('Detail', {item});
+    };
     return (
       <SliderEntry
         data={item}
@@ -37,6 +37,7 @@ const BookCarousel = (props) => {
           <Text style={styles.description}>{item.description}</Text>
         </View>
         <Button
+          type="clear"
           buttonStyle={styles.detailButton}
           icon={<Icon type="ionicon" name="arrow-forward-outline" size={20} />}
         />

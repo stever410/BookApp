@@ -10,6 +10,7 @@ const BookDetailHeader = (props) => {
       <Button
         type="clear"
         title="Back"
+        titleStyle={styles.title}
         icon={<Icon type="ionicon" name="chevron-back-outline" size={20} />}
         onPress={() => navigation.goBack()}
       />

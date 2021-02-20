@@ -1,15 +1,16 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../configs/colors';
 import FONTS from '../../configs/fonts';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.WHITE,
     borderBottomWidth: 0,
     borderTopWidth: 0,
   },
   inputContainer: {
-    backgroundColor: '#fff',
+    backgroundColor: COLORS.WHITE,
   },
   searchIcon: {
     marginLeft: 6,

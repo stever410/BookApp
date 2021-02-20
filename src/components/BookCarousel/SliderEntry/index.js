@@ -2,6 +2,7 @@ import React from 'react';
 import {Pressable} from 'react-native';
 import {ParallaxImage} from 'react-native-snap-carousel';
 import styles from './index.styles';
+import globalStyles from '../../../index.styles';
 
 const SliderEntry = (props) => {
   const {data, parallaxProps, handlePress} = props;
@@ -10,7 +11,7 @@ const SliderEntry = (props) => {
     <Pressable onPress={handlePress}>
       <ParallaxImage
         source={{uri: illustration}}
-        containerStyle={styles.imageContainer}
+        containerStyle={[styles.imageContainer, globalStyles.shadowSm]}
         style={styles.image}
         parallaxFactor={0.4}
         {...parallaxProps}

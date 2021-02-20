@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+import COLORS from '../../../configs/colors';
 import {ITEM_WIDTH} from '../constants';
 
 const styles = StyleSheet.create({
@@ -6,16 +7,8 @@ const styles = StyleSheet.create({
     width: ITEM_WIDTH,
     height: 150,
     flex: 1,
-    backgroundColor: '#fff',
-    borderRadius: 8,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 6,
+    backgroundColor: COLORS.WHITE,
+    borderRadius: 4,
   },
 });
 
