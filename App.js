@@ -15,11 +15,10 @@ const Tab = createBottomTabNavigator();
 
 const App = () => {
   const handleScreenOption = ({route}) => ({
-      tabBarIcon: ({focused, color, size}) => {
-        return <Icon type="ionicon" name={route.name} size={24}/>
-      },
-    });
-  };
+    tabBarIcon: ({focused, color, size}) => {
+      return <Icon type="ionicon" name={route.name} size={24} />;
+    },
+  });
 
   return (
     <SafeAreaProvider>
@@ -34,5 +33,4 @@ const App = () => {
     </SafeAreaProvider>
   );
 };
-
 export default App;
