@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import {ScrollView, View} from 'react-native';
 import {Button, Divider, Image, Text} from 'react-native-elements';
 import BookDetailHeader from '../../../components/BookDetailHeader';
 import styles from './index.styles';
@@ -23,6 +23,23 @@ const BookDetailScreen = (props) => {
         <BookInfo />
       </View>
       <Divider />
+      <View style={styles.overviewContainer}>
+        <Text style={styles.overviewHeader}>Overview</Text>
+      </View>
+      <ScrollView style={[styles.overviewContainer, styles.maxHeight150]}>
+        <Text style={styles.overviewText}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum vero
+          deserunt doloremque fuga magnam sit suscipit repudiandae qui, soluta
+          ipsa nisi repellat ab illum ipsum ipsam exercitationem! Eos, commodi
+          debitis.Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          vero deserunt doloremque fuga magnam sit suscipit repudiandae qui,
+          soluta ipsa nisi repellat ab illum ipsum ipsam exercitationem! Eos,
+          commodi debitis.Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Earum vero deserunt doloremque fuga magnam sit suscipit
+          repudiandae qui, soluta ipsa nisi repellat ab illum ipsum ipsam
+          exercitationem! Eos, commodi debitis.
+        </Text>
+      </ScrollView>
       <View style={styles.buttonContainer}>
         <Button
           title="START READING"

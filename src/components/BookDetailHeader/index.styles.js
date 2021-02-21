@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
   },
   title: {
     color: COLORS.DARK_BLUE,
-    fontFamily: FONTS.sfDisplay,
-    fontSize: 15,
+    fontFamily: FONTS.sfDisplaySemibold,
+    fontSize: 12,
   },
 });
 

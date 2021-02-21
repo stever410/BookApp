@@ -54,6 +54,28 @@ const styles = StyleSheet.create({
     fontSize: 11,
     letterSpacing: 0.5,
   },
+  overviewContainer: {
+    marginHorizontal: 30,
+  },
+  maxHeight150: {
+    maxHeight: 150,
+  },
+  overviewHeader: {
+    fontFamily: FONTS.sfDisplayBold,
+    fontSize: 15,
+    textAlign: 'left',
+    color: COLORS.DARK_BLUE,
+    marginTop: 20,
+    marginBottom: 5,
+  },
+  overviewText: {
+    fontFamily: FONTS.sfTextMedium,
+    fontSize: 11,
+    color: COLORS.DARK_GRAY,
+    lineHeight: 18,
+    textAlign: 'justify',
+    paddingRight: 15,
+  },
 });
 
 export default styles;
